@@ -8,12 +8,6 @@ Prevent script injection through $${myVariable}
 direct usage of [...].map() instead of [...].map().join('')
 
 
-#### What is template literals :
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
-#### 100% inspired by : 
-http://2ality.com/2015/01/template-strings-html.html
-
 ```javascript
 const folks = [
   {name: 'John'},
@@ -41,3 +35,10 @@ Result :
   <li>&lt;b&gt;Goliath&lt;/b&gt;</li>
 </ul>
 ```
+
+
+## What is template literals :
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+## 100% inspired by : 
+http://2ality.com/2015/01/template-strings-html.html
