@@ -1,3 +1,4 @@
+//UMD loader (https://github.com/umdjs/umd)
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -12,12 +13,20 @@
         root.html = factory();
     }
 }(typeof self !== 'undefined' ? self : this, function () {
-    // Use b in some fashion.
 
-    // Just return a value to define the module export.
-    // This example returns an object, but the module
-    // can return a function as the exported value.
 
+    /*
+        CODE STARTS HERE
+    */
+
+    function htmlEscape(str) {
+        return str.replace(/&/g, '&amp;') // first!
+                  .replace(/>/g, '&gt;')
+                  .replace(/</g, '&lt;')
+                  .replace(/"/g, '&quot;')
+                  .replace(/'/g, '&#39;')
+                  .replace(/`/g, '&#96;');
+    }
 
     function html(literalSections, ...substs) {
         // Use raw literal sections: we don’t want
@@ -54,32 +63,6 @@
 
         return result;
     }
-
-    function htmlEscape(str) {
-        return str.replace(/&/g, '&amp;') // first!
-                  .replace(/>/g, '&gt;')
-                  .replace(/</g, '&lt;')
-                  .replace(/"/g, '&quot;')
-                  .replace(/'/g, '&#39;')
-                  .replace(/`/g, '&#96;');
-    }
-
-    var users = [
-        {name: 'John'}, {name: 'Pat'}, {name: '<div class="hacker">Joe</div>'}
-    ]
-
-    /*
-    console.log(
-      html`
-        <h1>${users.length} users :</h1>
-        <ul>
-          ${users.map((user) => html`
-              <li>$${user.name}</li>
-          `)}
-        </ul>
-      `
-    )
-    */
 
     return html;
 }));
