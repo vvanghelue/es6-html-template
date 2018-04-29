@@ -1,16 +1,17 @@
-## micro HTML template engine over ES6 template literals
+# micro HTML template engine over ES6 template literals
 
 Features : 
-### Escaping
+## Escaping
 Prevent script injection through $${myVariable}
 
-### Loops
+## Loops
 direct usage of [...].map() instead of [...].map().join('')
 
-What is template literals :
+
+#### What is template literals :
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-100% inspired by : 
+#### 100% inspired by : 
 http://2ality.com/2015/01/template-strings-html.html
 
 ```javascript
@@ -28,5 +29,14 @@ const output = html`
     `)}
   </ul>
 `
-console.log(html)
+console.log(output)
+```
+
+```
+<h1>Folks</h1>
+<ul>
+  <li>John</li>
+  <li>David</li>
+  <li>&lt;b&gt;Goliath&lt;/b&gt;</li>
+</ul>
 ```
