@@ -1,0 +1,14 @@
+{
+  "name": "es6-html-template",
+  "version": "1.0.0",
+  "description": "Safe, light ES6 html template over es6 templates literals",
+  "main": "es6-html-template.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  }
+}
