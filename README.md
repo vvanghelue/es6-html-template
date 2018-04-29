@@ -1,4 +1,4 @@
-# micro HTML template engine over ES6 template literals
+# Micro HTML template engine over ES6 template literals
 
 Features : 
 ## Escaping
