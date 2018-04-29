@@ -8,7 +8,12 @@ Prevent script injection through $${myVariable}
 direct usage of [...].map() instead of [...].map().join('')
 
 
+## Example
+
 ```javascript
+
+const title = 'The cool folks list'
+
 const folks = [
   {name: 'John'},
   {name: 'David'},
@@ -16,7 +21,7 @@ const folks = [
 ]
 
 const output = html`
-  <h1>Folks</h1>
+  <h1>${title}</h1>
   <ul>
     ${folks.map((folk) => html`
     <li>$${folk.name}</li>
