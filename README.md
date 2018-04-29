@@ -32,6 +32,7 @@ const output = html`
 console.log(output)
 ```
 
+Result :
 ```
 <h1>Folks</h1>
 <ul>
