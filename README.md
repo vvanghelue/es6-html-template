@@ -24,7 +24,7 @@ const output = html`
   <h1>${title}</h1>
   <ul>
     ${folks.map((folk) => html`
-    <li>$${folk.name}</li>
+      <li>$${folk.name}</li>
     `)}
   </ul>
 `
@@ -33,7 +33,7 @@ console.log(output)
 
 Result :
 ```
-<h1>Folks</h1>
+<h1>The cool folks list</h1>
 <ul>
   <li>John</li>
   <li>David</li>
