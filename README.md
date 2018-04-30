@@ -2,7 +2,7 @@
 
 Features : 
 ## Escaping
-Prevent script injection through $${myVariable}
+Prevent script injection, with $${myVariable}
 
 ## Loops
 direct usage of [...].map() instead of [...].map().join('')
